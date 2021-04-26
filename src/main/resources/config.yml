@@ -1,0 +1,48 @@
+#==================================================================#
+#     ╔═══╗╔═══╗╔═══╕╔═══╗╒══╬══╕┍╍╥╍┑╔═══╗    ╊    ╌╍╁╍╌┠┤        #
+#     ║ █▌ ║ ▒ ║║___ ║ ▒ ║   ║    ┎╫┒ ║ ▓ ║    ╏      ╏  ┣╍╍╍┓     #
+#     ║ █▌ ╠══╦╝║ˉˉˉˉ╟╍╍╍╢   ╏    ┖╫┚ ║ ▓ ║    ╏      ╏  ╏ ▒ ╏     #
+#     ╚═══╝║  ╬═╚═══╛╜   ╙   ╎   ┕╍╨╍┙╚═══╝    ╄╍╍╍╃┍╍┻╍┑╄╍╍╍┩     #
+#==================================================================#
+#                        Main Configuration                        #
+#==================================================================#
+
+#DON'T TOUCH THIS!
+version: 3
+
+#Language
+language: en_US
+
+#Update Checker
+enable_update_checker: true
+
+#Metrics, which collects anonymous data for the developer.
+enable_metrics: true
+
+#Max projectiles in server
+max_projectiles: 800
+
+#Enable holographic damage indicator
+enable_dmg_indicator: true
+max_dmg_indicators: 200
+
+#MultiblockAPI
+enable_multiblock_api: true
+multiblock_api:
+    #The radius to check structure overlapping, ths radius detects the center block of structure
+    #Set to -1 to makes it infinite.
+    structure_check_radius: 64
+    #The max number of structure in the radius above.
+    #Set to -1 to makes it infinite.
+    max_structure_in_radius: 32
+    #The max number of structure in the whole server.
+    #Set to -1 to makes it infinite.
+    max_structure_in_server: 256
+    #The max number of active structure in the whole server.
+    #Active structure refers something like a machine that needs to be process every server tick.
+    #Set to -1 to makes it infinite.
+    max_active_structure: 64
+    #The interval between each structure auto-save, in ticks.
+    #Set to -1 to disable auto-save.
+    structure_save_interval: 6000
+

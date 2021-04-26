@@ -1,0 +1,198 @@
+#==================================================================#
+#     ╔═══╗╔═══╗╔═══╕╔═══╗╒══╬══╕┍╍╥╍┑╔═══╗    ╊    ╌╍╁╍╌┠┤        #
+#     ║ █▌ ║ ▒ ║║___ ║ ▒ ║   ║    ┎╫┒ ║ ▓ ║    ╏      ╏  ┣╍╍╍┓     #
+#     ║ █▌ ╠══╦╝║ˉˉˉˉ╟╍╍╍╢   ╏    ┖╫┚ ║ ▓ ║    ╏      ╏  ╏ ▒ ╏     #
+#     ╚═══╝║  ╬═╚═══╛╜   ╙   ╎   ┕╍╨╍┙╚═══╝    ╄╍╍╍╃┍╍┻╍┑╄╍╍╍┩     #
+#==================================================================#
+#                      Language & Translation                      #
+#==================================================================#
+#
+#Use %prefix%(PREFIX), %w%(WARN), %e%(ERROR), %n%(NORMAL), %s%(SUCCESS), %h%(HIGHLIGHT) as placeholder.
+#Use "/&" if you don't want it to be translated into "§".
+#
+#   en_US
+#
+
+MAIN:
+  FORMAT:
+    PREFIX: '&8&l[&b&lCreatio&3&lLib&8&l] &r'
+    WARN: '&e'
+    ERROR: '&c'
+    NORMAL: '&7'
+    SUCCESS: '&a'
+    HIGHLIGHT: '&6'
+  LOADING:
+    - '&9========================================================'
+    - '&b╔═══╗╔═══╗╔═══╕╔═══╗╒══╬══╕┍╍╥╍┑╔═══╗    ╊    ╌╍╁╍╌┠┤   '
+    - '&b║ █▌ ║ ▒ ║║___ ║ ▒ ║   ║    ┎╫┒ ║ ▓ ║    ╏      ╏  ┣╍╍╍┓'
+    - '&3║ █▌ ╠══╦╝║ˉˉˉˉ╟╍╍╍╢   ╏    ┖╫┚ ║ ▓ ║    ╏      ╏  ╏ ▒ ╏'
+    - '&3╚═══╝║  ╬═╚═══╛╜   ╙   ╎   ┕╍╨╍┙╚═══╝    ╄╍╍╍╃┍╍┻╍┑╄╍╍╍┩'
+    - '&9========================================================'
+  LOADED: '%prefix%%w%Plugin successfully loaded!'
+  HOOKED: '%prefix%%n%Hooked with &e&l%0%'
+  HOOK_FAILED: '%prefix%%e%Trying to hook &e&l%0%%e% failed!'
+  UPDATE:
+    - '&7&m----------------------------------------------------------------'
+    - '%prefix%%n%UPDATE CHECKER : &9&l%0% &e-> &9&l%1%'
+    - '%prefix%%s%An Update Found! New features /& bug fixes, check it here:'
+    - '              &c&lhttps://github.com/HenryRenYz/CreatioLib/releases'
+    - '&7&m----------------------------------------------------------------'
+  UPDATE_DISABLED:
+    - '%prefix%%w%Update checker was disabled in config file,'
+    - '  %w%check the website manually to make sure you have the latest update.'
+  METRIC_DISABLED: '%prefix%%w%Metric was disabled in config file.'
+  #Generic errors
+  ERROR:
+    NEGATIVE: '%prefix%%e%Invalid syntax: %h%%0% %e%cannot be a negative number!'
+    IS_NULL: '%prefix%%e%Invalid syntax: %h%%0% %e%cannot be null!'
+    INVALID: '%prefix%%e%Invalid syntax: %h%%0% %e%is not a valid type!'
+    INVALID_ARG: '%prefix%%e%Invalid argument: %h%%0% %e% is not a valid argument!'
+    NOT_NUM: '%prefix%%e%Invalid argument: %h%%0% %e%is not a number!'
+    CONSOLE: '%prefix%%e%This command can only be performed by a player!'
+  NO_PERM: '%prefix%%e%You don''t have permission to do this!'
+  RELOAD:
+    CONFIG: '%prefix%%n%Reloading all configs!'
+    STRUCTURE_CONFIG: '%prefix%%n%Reloading all multiblock structures!'
+    SINGLE: '%prefix%%n%Reloading %h%%0%'
+    DONE_SINGLE: '%prefix%s%File %h%%0% %s%loaded successfully.'
+    DONE: '%prefix%%h%%0% %s%files was loaded successfully.'
+    CORRUPT: '%prefix%%e%Structure %h%%0% %e%was corrupted! Check it with example to find out if a section is missing!'
+  MULTIBLOCK_API:
+    CREATE: '%prefix%%s%Structure %h%&l%0% %s%created.'
+    REMOVE: '%prefix%%s%Structure %h%&l%0% &7(&f%1%&7) %s%removed.'
+    DISPLAY:
+      REGISTERED: 'Registered Machines'
+      MULTIBLOCK: 'Multiblock Structures'
+      ACTIVE: 'Active Structures'
+      MACHINE: 'Machines'
+    REGISTER:
+      SELECTOR_GIVEN: '%prefix%%h%&lStructure Selector%s% is given to &e%0%'
+      INVALID_NAME: '%prefix%%h%%0%%e% is not a valid name!'
+      NO_POINT: '%prefix%%w%Please select 3 points to locate the structure!'
+      SELECTED: '%prefix%%n%Selected %h%%0%%n% at block %1%'
+    SAVE: '%prefix%%s%All structures data saved!'
+    INFO:
+      STRUCTURES:
+        HEADER: '%prefix%%n%Info of structure %h%&l%0%%n%:'
+        NOT_EXIST: '%prefix%%n%No structure fonnd with uuid %h%&l%0%%n%.'
+        NOT_FOUND: '%prefix%%n%No structure found.'
+      REGISTERED:
+        HEADER: '%prefix%%n%Info of registered structure %h%&l%0%%n%:'
+        NOT_EXIST: '%prefix%%n%No registered structure fonnd with namespace %h%&l%0%%n%.'
+  CLASS_LOADER:
+    PREFIX: '&8&l[&b&lC&3&lLib&8&l][&a&lCls&2&lLoader&8&l] &r'
+    COMPILATION:
+      START: '%prefix%%n%Start compiling %h%%0% %n%...'
+      SUCCESS: '%prefix%%s%Successfully compiled %h%%0%%n%!'
+      FAILED: '%prefix%%e%Compilation failed! Diagnostic logs:'
+      FAILED_PLAYER: '%prefix%%e%Compilation failed! See console for details.'
+      BAD_OPTION: '%prefix%Invalid compiling option: %h%%0%'
+    LOADING:
+      START: '%prefix%%n%Start loading %h%%0% %n%..'
+      RECENTLY: 'recently compiled classes'
+      SUCCESS: '%prefix%%s%%0% loaded!'
+      FAILED: '%prefix%%n%Failed to load classes! See console for details.'
+  #File operation and errors
+  FILE:
+    ALL_FILES: 'all files in %0%'
+    FILE: ' file(s)'
+    DOESNT_EXIST: '%prefix%%w%File %h%%0% %w%does not exist!'
+    NO_FILE: '%prefix%%e%No %h%&l&n%0%%e% file presented in the folder!'
+    INVALID_FILE: '%prefix%%e%Invalid file type %h%%0%%e%! Expected: %h%%1%'
+    INVALID_PATH: '%prefix%%e%Invalid file path %h%%0%%e%! Should be formatted as &efile/name'
+    NOT_FOLDER: '%prefix%%h%%0%%e% is not a folder!'
+    INFO: '%prefix%%n%Info of file %h%%0%%n%:'
+    #Display name for different type of files
+    dotJAVA: 'source file'
+    dotCLASS: 'class file'
+  LIST:
+    HEADER: '%prefix%%n%Listing all %h%&l%0%%n%:'
+    FOOTER: '%prefix%%n%Total %0% items.'
+    NOT_FOUND: '%prefix%%n%There''s no %h%%0%%n% found.'
+#Messages that used in hooked plugins
+  HOOK:
+    SKRIPT:
+      PREFIX: '&8&l[&b&lCreatio&3&lLib &7- %h%&lSkript &8&l] &r'
+      ERROR:
+        GEN_PARTICLE:
+          DATA:
+            - '%prefix%%e%Invalid data syntax: ParticleParam cannot be set to %h%&n%0%%e%! Valid form:'
+            - '          %e%* ITEM_CRACK                         '
+            - '          - %itemstack% (stone, iron pickaxe)'
+            - '          %e%* REDSTONE                           '
+            - '          - %string% (bukkitColor or string (packet only) dx,dy,dz,size; "0.5,0.5,0.5,2")'
+            - '          %e%* BLOCK_CRACK BLOCK_DUST FALLING_DUST'
+            - '          - %blockdata% ()'
+          PARTICLE: '%prefix%%e%Invalid particle name: %h%&n%0% is not a particle name!'
+
+#Messages for /creatio command
+COMMAND:
+  USAGE:
+    CREATIO:
+      - '%prefix%%n%Usage: /creatio <reload/structures/class>'
+      - '    &8- %w%reload [structures/all] %n%reload configs'
+      - '    &8- %w%structures <...> %n%commands related to MultiblockAPI'
+      - '    &8- %w%class <...> %n%commands related to Java Class Loader'
+    RELOAD:
+      - '%prefix%%n%Usage: /creatio reload [all/structures]'
+      - '    &8- %w%all %n%reload all configs'
+      - '    &8- %w%structures %n%reload all structures'
+    STRUCTURES:
+      USAGE:
+        - '%prefix%%n%Usage: /creatio structures <list/create/remove/save/info/register>'
+        - '    &8- %w%list [...] %n%list loaded structures'
+        - '    &8- %w%create <Name Space> <Facing> %n%create a multiblock structure'
+        - '    &8- %w%remove %n%remove the structure in front of player'
+        - '    &8- %w%save %n%save all data of structures'
+        - '    &8- %w%info [...] %n%get info of a structure'
+        - '    &8- %w%register <...> %n%lregister a new structure'
+      CREATE:
+        - '%prefix%%n%Usage: /creatio structures create <Name Space> <Facing(etc. north)>'
+        - '    &8- %n%Create a new multiblock structure instance'
+        - '    &8- %n%You have to target at the center block when creating.'
+      FAILED: '%prefix%%w%Structure construction failed! Reason: %h%%0%'
+      NO_TARGET: '%prefix%%w%Please target at a valid structure!'
+      LIST:
+        - '%prefix%%n%Usage: /creatio structures list [registered/multiblock/active/machine] [page]'
+        - '    &8- %w%registered %n%list all registered structures'
+        - '    &8- %w%multiblock %n%list all existing structures'
+        - '    &8- %w%active %n%list all active(ticking) structures'
+        - '    &8- %w%machine %n%list all machines'
+      INFO:
+        USAGE:
+          - '%prefix%%n%Usage: /creatio structures info [<registered/multiblock>]'
+          - '    &8- %w%registered <Name Space> %n%get info of a registered structure'
+          - '    &8- %w%multiblock <UUID> %n%get info of a multiblock structure'
+          - '    &8- %w%*empty* %n%get info of player''s targeted structure'
+        MULTIBLOCK:
+          - '%prefix%%n%Usage: /creatio structures info multiblock <UUID>'
+          - '    &8- %n%lGet the info of a existing structure with given UUID'
+        REGISTERED:
+          - '%prefix%%n%Usage: /creatio structures info registered <Name Space>'
+          - '    &8- %n%lGet the info of a registered structure with given name space'
+      REGISTER:
+        USAGE: '%prefix%%n%Usage: /creatio structures register <Name Space> <Facing(etc. north)> [-Flags]'
+    CLASS_LOADER:
+      USAGE:
+        - '%prefix%%n%Usage: /creatio class <compile/list/load/unload/reload/enable/disable/sysinfo/run>'
+        - '    &8- %w%compile <File/Folder Path> [opt] %n%compile a source file'
+        - '    &8- %w%run <Class Name> <Method Name> %n%run a non-param method of a class'
+        - '    &8- %w%list <...> %n%list all java or class file in a folder'
+        - '    &8- %w%load <Class/Folder Path> %n%load a class file to server'
+        - '    &8- %w%unload <Class Name> %n%unload a class'
+        - '    &8- %w%reload <Package Path> %n%reload all classes in a package'
+        - '    &8- %w%enable <Class/Folder Path> %n%enable a file or a folder'
+        - '    &8- %w%disable <Class/Folder Path> %n%disable a file or a folder'
+        - '    &8- %w%sysinfo %n%get computer and java info'
+      LIST:
+        - '%prefix%%n%Usage: /creatio class list <(java|source)/(class|compiled)>'
+        - '    &8- %w%java/source [Folder Path] [Page] %n%list all source files in a folder'
+        - '    &8- %w%class/compiled [Folder Path] [Page] %n%list all class files in a folder'
+      COMPILE:
+        - '%prefix%%n%Usage: /creatio class compile <File/Folder Path> [options]'
+        - '    &8- %n%Compile a source file to class and load it into server'
+        - '    &8- %h%File Path%n% can be either a .class file or a folder'
+        - '    &8- %h%options%n% are the arguments for Java Compiler'
+
+#'    &8- %w%cmd %n%dsc'
+#'    &8- %n%'

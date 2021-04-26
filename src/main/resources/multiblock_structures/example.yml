@@ -1,0 +1,68 @@
+#==================================================================#
+#     ╔═══╗╔═══╗╔═══╕╔═══╗╒══╬══╕┍╍╥╍┑╔═══╗    ╊    ╌╍╁╍╌┠┤        #
+#     ║ █▌ ║ ▒ ║║___ ║ ▒ ║   ║    ┎╫┒ ║ ▓ ║    ╏      ╏  ┣╍╍╍┓     #
+#     ║ █▌ ╠══╦╝║ˉˉˉˉ╟╍╍╍╢   ╏    ┖╫┚ ║ ▓ ║    ╏      ╏  ╏ ▒ ╏     #
+#     ╚═══╝║  ╬═╚═══╛╜   ╙   ╎   ┕╍╨╍┙╚═══╝    ╄╍╍╍╃┍╍┻╍┑╄╍╍╍┩     #
+#==================================================================#
+#                     Multiblock API Structures                    #
+#==================================================================#
+#     This is an example config.
+#
+
+#Name of the structure, contains only latters and underlines, used in Skript syntax and commands.
+STRUCTURES:
+  BLAST_FURNACE:
+    #Display name of the structure.
+    NAME: '&7&l[&6&lBlasting Furnace&7&l]'
+    #Center block of the structure, used for coordinating and loading.
+    #This is used in creating and ticking the structure.
+    CENTER_BLOCK: blast_furnace
+    #Will unregister when any of the block in structure is changed?
+    #However, the structure will still be unregistered when the center block destroyed.
+    UNSTABLE: true
+    #Will the chunks remain loading when the structure is loaded?
+    #The structure will be load when player is in the certain radius of the structure and the chunk remains loading.
+    LOAD_CHUNK: false
+    #Radius of chunk load, in blocks.
+    LOAD_CHUNK_RADIUS: 16
+    #The local coords of corner block from center block.
+    CORNER:
+      - -2
+      - -1
+      - -3
+    #Wheather the structure is flippable
+    FLIPPABLE: false
+    #If the structure can overlap with another structure.
+    #However the structure were not allower to have complete overlapping, means the cube of structure are exactly the same.
+    OVERLAPPABLE: false
+    #If this structure requires update, like a machine.
+    REQUIRE_UPDATE: true
+    #The class name of hooked machine.
+    HOOKED_MACHINE: BlastFurnace
+    MAP:
+      #The Pattern of structure, from bottom to top, space means it can be any block(including air).
+      PATTERN:
+        - - 'dddd'      #The CORNER of the structure should be the first 'd' on the left
+          - 'dddd'
+          - 'dddd'
+          - 'dddd'
+          - 'dddd'
+
+        - - 'dddd'
+          - 'daad'
+          - 'daad'
+          - 'daad'
+          - 'ddtd'
+
+        - - ' dd '
+          - 'dddd'
+          - 'dddd'
+          - 'dddd'
+          - ' dd '
+
+      BLOCKS:
+        d: POLISHED_ANDESITE
+        a: AIR
+        t: BLAST_FURNACE facing=?
+
+

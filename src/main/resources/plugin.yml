@@ -1,0 +1,7 @@
+name: CreatioLib
+version: 0.1.20-alpha
+main: vip.creatio.clib.internal.CLibBootstrap
+api-version: 1.13
+depend: [CLibBasic]
+author: HenryRenYz
+description: Provide enhanced gameplay mekanisms.
