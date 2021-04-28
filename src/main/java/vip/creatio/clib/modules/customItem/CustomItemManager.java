@@ -1,5 +1,6 @@
 package vip.creatio.clib.modules.customItem;
 
+import vip.creatio.basic.util.NMS;
 import vip.creatio.clib.Creatio;
 import vip.creatio.basic.annotation.Listener;
 import vip.creatio.basic.annotation.Task;
@@ -102,7 +103,7 @@ public final class CustomItemManager {
     @Nullable
     public static CustomItemStack getCustomItem(ItemStack itemStack) {
         if (itemStack instanceof CraftItemStack) {
-            return getCustomItem(ItemUtil.toNms(itemStack));
+            return getCustomItem(NMS.toNms(itemStack));
         }
         return null;
     }

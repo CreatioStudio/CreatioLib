@@ -6,6 +6,7 @@ import net.minecraft.server.ItemStack;
 import org.bukkit.Material;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import vip.creatio.basic.util.NMS;
 
 public class CustomItemStack {
 
@@ -15,7 +16,7 @@ public class CustomItemStack {
 
     CustomItemStack(ItemStack handle, CustomItem type) {
         this.handle = handle;
-        this.item = ItemUtil.toBukkit(handle);
+        this.item = NMS.toBukkit(handle);
         this.type = type;
     }
 
