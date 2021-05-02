@@ -3,7 +3,7 @@ package vip.creatio.clib.modules.customDmg;
 import vip.creatio.basic.util.EntityUtil;
 import vip.creatio.basic.util.ItemUtil;
 import vip.creatio.clib.modules.util.LocationUtil;
-import vip.creatio.common.Mth;
+import vip.creatio.common.util.Mth;
 import org.bukkit.*;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.enchantments.Enchantment;

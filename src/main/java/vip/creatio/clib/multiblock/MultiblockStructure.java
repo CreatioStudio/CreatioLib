@@ -5,7 +5,7 @@ import vip.creatio.clib.modules.exception.StructureConstructionException;
 import vip.creatio.clib.modules.util.LocationUtil;
 import vip.creatio.clib.multiblock.event.MultiblockAPIStructureCreateEvent;
 import vip.creatio.clib.multiblock.machine.Machine;
-import vip.creatio.common.Mth;
+import vip.creatio.common.util.Mth;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;

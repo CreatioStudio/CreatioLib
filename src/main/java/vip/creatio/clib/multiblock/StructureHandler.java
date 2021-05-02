@@ -1,7 +1,7 @@
 package vip.creatio.clib.multiblock;
 
-import vip.creatio.basic.annotation.Listener;
-import vip.creatio.basic.annotation.Task;
+import vip.creatio.basic.tools.Listener;
+import vip.creatio.basic.tools.Task;
 import vip.creatio.clib.modules.util.LocationUtil;
 import vip.creatio.clib.multiblock.event.MultiblockAPIStructureDestoryEvent;
 import vip.creatio.clib.multiblock.event.MultiblockAPIStructureInteractEvent;

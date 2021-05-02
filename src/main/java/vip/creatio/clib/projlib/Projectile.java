@@ -1,8 +1,8 @@
 package vip.creatio.clib.projlib;
 
 import vip.creatio.clib.Creatio;
-import vip.creatio.basic.annotation.Task;
-import vip.creatio.basic.annotation.TaskType;
+import vip.creatio.basic.tools.Task;
+import vip.creatio.basic.tools.TaskType;
 import vip.creatio.clib.modules.function.Tickable;
 import vip.creatio.clib.modules.util.GeoLocation;
 import org.bukkit.Location;

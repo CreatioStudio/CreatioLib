@@ -1,7 +1,7 @@
 package vip.creatio.clib.modules.customDmg;
 
 import vip.creatio.basic.chat.Component;
-import vip.creatio.common.Mth;
+import vip.creatio.common.util.Mth;
 import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.util.Vector;

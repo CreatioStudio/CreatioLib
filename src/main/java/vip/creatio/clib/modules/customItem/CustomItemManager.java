@@ -2,15 +2,15 @@ package vip.creatio.clib.modules.customItem;
 
 import vip.creatio.basic.util.NMS;
 import vip.creatio.clib.Creatio;
-import vip.creatio.basic.annotation.Listener;
-import vip.creatio.basic.annotation.Task;
+import vip.creatio.basic.tools.Listener;
+import vip.creatio.basic.tools.Task;
 import vip.creatio.basic.tools.GlobalTaskExecutor;
 import vip.creatio.basic.util.EntityUtil;
 import vip.creatio.basic.util.ItemUtil;
 import vip.creatio.basic.chat.Component;
 import vip.creatio.basic.nbt.CompoundTag;
 import vip.creatio.basic.nbt.ListTag;
-import vip.creatio.common.ArrayUtil;
+import vip.creatio.common.util.ArrayUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.craftbukkit.inventory.CraftItemStack;

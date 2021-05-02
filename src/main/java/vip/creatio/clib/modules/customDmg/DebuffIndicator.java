@@ -5,7 +5,7 @@ import vip.creatio.basic.util.EntityUtil;
 import vip.creatio.basic.util.MthUtil;
 import vip.creatio.basic.chat.Component;
 import vip.creatio.basic.nbt.CompoundTag;
-import vip.creatio.common.Mth;
+import vip.creatio.common.util.Mth;
 import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.entity.ArmorStand;

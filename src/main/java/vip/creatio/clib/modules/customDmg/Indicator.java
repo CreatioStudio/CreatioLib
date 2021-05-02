@@ -1,13 +1,13 @@
 package vip.creatio.clib.modules.customDmg;
 
 import vip.creatio.clib.Creatio;
-import vip.creatio.basic.annotation.Task;
-import vip.creatio.basic.annotation.TaskType;
+import vip.creatio.basic.tools.Task;
+import vip.creatio.basic.tools.TaskType;
 import vip.creatio.basic.util.EntityUtil;
 import vip.creatio.basic.util.MthUtil;
 import vip.creatio.clib.projlib.OrbitUnit;
 import vip.creatio.basic.chat.Component;
-import vip.creatio.common.Mth;
+import vip.creatio.common.util.Mth;
 import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;

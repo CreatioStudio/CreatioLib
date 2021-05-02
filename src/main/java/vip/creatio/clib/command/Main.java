@@ -26,7 +26,7 @@ import java.io.File;
 import java.util.*;
 import java.util.function.Predicate;
 
-import static vip.creatio.common.ArrayUtil.get;
+import static vip.creatio.common.util.ArrayUtil.get;
 
 @SuppressWarnings("unused")
 public final class Main implements CommandBuilder {

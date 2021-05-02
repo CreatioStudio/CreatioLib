@@ -1,6 +1,6 @@
 package vip.creatio.clib.modules.configReader;
 
-import vip.creatio.common.StringUtil;
+import vip.creatio.common.util.StringUtil;
 import org.apache.commons.lang3.StringEscapeUtils;
 
 import java.util.*;

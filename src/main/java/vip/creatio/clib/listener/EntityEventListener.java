@@ -1,7 +1,7 @@
 package vip.creatio.clib.listener;
 
 import vip.creatio.clib.Creatio;
-import vip.creatio.basic.annotation.Listener;
+import vip.creatio.basic.tools.Listener;
 import vip.creatio.clib.modules.customDmg.CustomDamageEvent;
 import vip.creatio.clib.modules.customDmg.Damage;
 import vip.creatio.clib.modules.customDmg.Indicator;

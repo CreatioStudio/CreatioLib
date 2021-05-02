@@ -1,7 +1,7 @@
 package vip.creatio.clib.modules.menu;
 
-import vip.creatio.basic.annotation.Listener;
-import vip.creatio.basic.annotation.Task;
+import vip.creatio.basic.tools.Listener;
+import vip.creatio.basic.tools.Task;
 import vip.creatio.clib.multiblock.StructureManager;
 import vip.creatio.clib.multiblock.machine.Machine;
 import org.bukkit.event.inventory.*;

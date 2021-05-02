@@ -1,12 +1,12 @@
 package vip.creatio.clib.modules.buff;
 
 import vip.creatio.clib.Creatio;
-import vip.creatio.basic.annotation.Listener;
-import vip.creatio.basic.annotation.Task;
-import vip.creatio.basic.annotation.TaskType;
+import vip.creatio.basic.tools.Listener;
+import vip.creatio.basic.tools.Task;
+import vip.creatio.basic.tools.TaskType;
 import vip.creatio.clib.modules.function.Tickable;
 import vip.creatio.basic.chat.Component;
-import vip.creatio.common.StringUtil;
+import vip.creatio.common.util.StringUtil;
 import org.bukkit.Location;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeInstance;
