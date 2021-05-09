@@ -29,7 +29,7 @@ public class EntityEventListener {
             if (event.getEntity() instanceof LivingEntity) {
                 Location loc = ((LivingEntity) event.getEntity()).getEyeLocation();
                 for (Player p : Bukkit.getOnlinePlayers()) {
-                    if (p.getLocation().distance(loc) < 64) {
+                    if (p.getWorld() == loc.getWorld() && p.getLocation().distance(loc) < 64) {
                         if (BUFF.contains(event.getRegainReason())) {
                             Indicator.newHealIndicator(((LivingEntity) event.getEntity()).getEyeLocation(),
                                     (float) event.getAmount(), Indicator.HEALING_IND_BUFF);

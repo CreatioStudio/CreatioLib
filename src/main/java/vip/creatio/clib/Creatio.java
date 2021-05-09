@@ -142,7 +142,8 @@ public final class Creatio extends DelegatedPlugin {
         String lang = config.getString("language", "en_US");
         Configs.updateConfig(bootstrap, "lang/" + lang + ".yml", -1);
         Configuration langConfig = Configs.load(bootstrap, "lang/" + lang + ".yml");
-        this.msg = new FormatMsgManager(langConfig, langConfig.getString("MAIN.FORMAT.PREFIX"));
+        this.msg = new FormatMsgManager(langConfig);
+        this.msg.addReplacerToPath("%prefix%", "MAIN.FORMAT.PREFIX");
         this.msg.addReplacer("%w%", langConfig.getString("MAIN.FORMAT.WARN", "&e"));
         this.msg.addReplacer("%e%", langConfig.getString("MAIN.FORMAT.ERROR", "&c"));
         this.msg.addReplacer("%n%", langConfig.getString("MAIN.FORMAT.NORMAL", "&7"));

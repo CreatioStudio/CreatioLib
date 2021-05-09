@@ -6,7 +6,7 @@ import vip.creatio.basic.tools.Task;
 import vip.creatio.basic.tools.TaskType;
 import vip.creatio.clib.modules.function.Tickable;
 import vip.creatio.basic.chat.Component;
-import vip.creatio.common.util.StringUtil;
+import vip.creatio.common.util.StringFormatUtil;
 import org.bukkit.Location;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeInstance;
@@ -308,7 +308,7 @@ public abstract class Buff implements Tickable {
     }
 
     protected String toRomanNumber(int num) {
-        return StringUtil.toRomanNumber(num);
+        return StringFormatUtil.toRomanNumber(num);
     }
 
     /** Merge 2 same kind of com.henryrenyz.creatio.buff, returns true if any operation applied on this com.henryrenyz.creatio.buff */

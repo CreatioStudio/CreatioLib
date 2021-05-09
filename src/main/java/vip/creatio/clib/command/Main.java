@@ -246,8 +246,8 @@ public final class Main implements CommandBuilder {
                                             page,
                                             15,
                                             StructureManager.getRegisteredStructures().values(),
-                                            msg.fromPath("MAIN.MULTIBLOCK_API.DISPLAY.REGISTERED")[0],
-                                            msg.fromPath("MAIN.MULTIBLOCK_API.DISPLAY.REGISTERED")[0],
+                                            msg.getList("MAIN.MULTIBLOCK_API.DISPLAY.REGISTERED")[0],
+                                            msg.getList("MAIN.MULTIBLOCK_API.DISPLAY.REGISTERED")[0],
                                             (index, item) -> Component.of("  §l" + index + ". ")
                                                     .append(Component.of("§e§l<i> §a" + item)
                                                             .onClick(ClickEvent.runCmd("/creatio structures info registered " + item))
@@ -260,8 +260,8 @@ public final class Main implements CommandBuilder {
                                             page,
                                             15,
                                             StructureManager.getMultiblockStructures(),
-                                            msg.fromPath("MAIN.MULTIBLOCK_API.DISPLAY.MULTIBLOCK")[0],
-                                            msg.fromPath("MAIN.MULTIBLOCK_API.DISPLAY.MULTIBLOCK")[0],
+                                            msg.getList("MAIN.MULTIBLOCK_API.DISPLAY.MULTIBLOCK")[0],
+                                            msg.getList("MAIN.MULTIBLOCK_API.DISPLAY.MULTIBLOCK")[0],
                                             (index, item) -> Component.of("  §l" + index + ". ")
                                                     .append(Component.of("§e§l<i> §a" + item.getNameSpace() + " §f- " + item.getName())
                                                             .onClick(ClickEvent.runCmd("/creatio structures info multiblock " + item.getUUID()))
@@ -274,8 +274,8 @@ public final class Main implements CommandBuilder {
                                             page,
                                             15,
                                             StructureManager.getActiveStructures(),
-                                            msg.fromPath("MAIN.MULTIBLOCK_API.DISPLAY.ACTIVE")[0],
-                                            msg.fromPath("MAIN.MULTIBLOCK_API.DISPLAY.ACTIVE")[0],
+                                            msg.getList("MAIN.MULTIBLOCK_API.DISPLAY.ACTIVE")[0],
+                                            msg.getList("MAIN.MULTIBLOCK_API.DISPLAY.ACTIVE")[0],
                                             (index, item) -> Component.of("  §l" + index + ". ")
                                                     .append(Component.of("§e§l<i> §a" + item.getNameSpace() + " §f- " + item.getName())
                                                             .onClick(ClickEvent.runCmd("/creatio structures info multiblock " + item.getUUID()))
@@ -288,8 +288,8 @@ public final class Main implements CommandBuilder {
                                             page,
                                             15,
                                             StructureManager.getMachines(),
-                                            msg.fromPath("MAIN.MULTIBLOCK_API.DISPLAY.MACHINE")[0],
-                                            msg.fromPath("MAIN.MULTIBLOCK_API.DISPLAY.MACHINE")[0],
+                                            msg.getList("MAIN.MULTIBLOCK_API.DISPLAY.MACHINE")[0],
+                                            msg.getList("MAIN.MULTIBLOCK_API.DISPLAY.MACHINE")[0],
                                             (index, item) -> Component.of("  §l" + index + ". ")
                                                     .append(Component.of("§e§l<i> §a" + item.getNameSpace() + " §f- " + item.getHookedStructure().getName())
                                                             .onClick(ClickEvent.runCmd("/creatio structures info multiblock "
@@ -303,8 +303,8 @@ public final class Main implements CommandBuilder {
                                             page,
                                             15,
                                             StructureManager.getRegisteredMachines().values(),
-                                            msg.fromPath("MAIN.MULTIBLOCK_API.DISPLAY.REGISTERED")[0],
-                                            msg.fromPath("MAIN.MULTIBLOCK_API.DISPLAY.REGISTERED")[0],
+                                            msg.getList("MAIN.MULTIBLOCK_API.DISPLAY.REGISTERED")[0],
+                                            msg.getList("MAIN.MULTIBLOCK_API.DISPLAY.REGISTERED")[0],
                                             (index, item) -> Component.of("  §l" + index + ". ")
                                                     .append(Component.of("§a" + item.getDeclaringClass().getSimpleName()
                                                             + " §f[§7" + item.getDeclaringClass().getCanonicalName() + "§f]")
@@ -567,7 +567,7 @@ public final class Main implements CommandBuilder {
 
     private static Component[] multiblockInfo0(MultiblockStructure str) {
         Component[] text = new Component[10];
-        text[0] = Component.of(msg.fromPath("MAIN.MULTIBLOCK_API.INFO.STRUCTURES.HEADER", str.getNameSpace())[0]);
+        text[0] = Component.of(msg.getList("MAIN.MULTIBLOCK_API.INFO.STRUCTURES.HEADER", str.getNameSpace())[0]);
         text[1] = Component.of("  §7UUID: §e" + str.getUUID())
                 .onHover(HoverEvent.showText(Component.of("§eCopy UUID")))
                 .onClick(ClickEvent.suggestCmd(str.getUUID().toString()));
@@ -596,7 +596,7 @@ public final class Main implements CommandBuilder {
 
     private static Component[] registeredInfo0(RegisteredStructure reg) {
         Component[] text = new Component[7];
-        text[0] = Component.of(msg.fromPath("MAIN.MULTIBLOCK_API.INFO.STRUCTURES.HEADER", reg.getNameSpace())[0]);
+        text[0] = Component.of(msg.getList("MAIN.MULTIBLOCK_API.INFO.STRUCTURES.HEADER", reg.getNameSpace())[0]);
         text[1] = Component.of("  §7Name space: §f" + reg.getNameSpace());
         text[2] = Component.of("  §7Default name: §f" + reg.getName());
         text[3] = Component.of("  §7Flippable: §f" + reg.flippable());
@@ -640,9 +640,9 @@ public final class Main implements CommandBuilder {
 
         Component[] text = new Component[Math.min(src.size(), pgSize) + 3];
         if (nullLogic.test(src)) {
-            text[0] = Component.of(msg.fromPath("MAIN.LIST.NOT_FOUND", nullHolder)[0]);
+            text[0] = Component.of(msg.getList("MAIN.LIST.NOT_FOUND", nullHolder)[0]);
         } else {
-            text[0] = Component.of(msg.fromPath("MAIN.LIST.HEADER", title)[0]);
+            text[0] = Component.of(msg.getList("MAIN.LIST.HEADER", title)[0]);
 
             int k = 1;
             int set = 0;
@@ -656,7 +656,7 @@ public final class Main implements CommandBuilder {
             }
 
             text[k] = bottom.get(page, k < 15);
-            text[k + 1] = Component.of(msg.fromPath("MAIN.LIST.FOOTER", Integer.toString(src.size()))[0]);
+            text[k + 1] = Component.of(msg.getList("MAIN.LIST.FOOTER", Integer.toString(src.size()))[0]);
         }
         return text;
     }
